@@ -84,7 +84,6 @@ main h2{
     text-align: center;
 }
 
-
 .divProductos .divProductoProductos {
     display: inline-block;
     margin: 50px 150px;
@@ -100,7 +99,33 @@ main h2{
     font-size: 20px; 
 }
 
+/* Producto */
 
+.divProducto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.divImagenProducto{
+    margin: 20px;
+    justify-self: center;
+}
+
+.divImagenProducto img{
+    margin: 20px;
+    width: 300px;
+}
+
+.divDescripcionProducto{
+    margin-right: 250px;
+    justify-self: right;
+    align-self: start;
+}
+
+.divGenericoDescripcionProducto{
+    font-size: 160px;
+
+}
 /* Cuenta */
 
 .botones{
