@@ -82,17 +82,18 @@ main h2{
 
 .divProductos{
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-gap: 50px;
 }
 
 .divProductos .divProductoProductos {
-    display: inline-block;
-    margin: 50px 150px;
     text-align: center;
   }
 
 .divProductoProductos img{
     margin-top: 20px;
-    width: 300px;
+    width: 70%;    
 }
 
 .divProductos .divProductoProductos h3 {
@@ -123,8 +124,7 @@ main h2{
 }
 
 .divGenericoDescripcionProducto{
-    font-size: 160px;
-
+    font-size: 16px;
 }
 /* Cuenta */
 
@@ -246,6 +246,7 @@ footer{
     padding: 10px 10px;
     text-align: center;
     color: blanchedalmond;
+    margin-top: 20px;
 }
 
 footer div a{
