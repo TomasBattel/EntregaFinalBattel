@@ -1,3 +1,4 @@
+
 /* RESET */
 *{
     margin: 0;
@@ -5,32 +6,29 @@
     box-sizing: border-box;
 }
 
+
 /* Estilo global */
 body{
     background-color: blanchedalmond;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 header{
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    align-items: center;
     height: 75px;
-    padding: 100px 130px;
+    padding: 100px;
+    background-color: rgb(0, 0, 0);
 }
 
-header a{
-    text-decoration: none;
-    color: blanchedalmond;
-}
-
+/* 
+        header a{
+            text-decoration: none;
+            color: blanchedalmond;
+        }
+*/
 a{
     text-decoration: none;
     color: black;
-}
+    }
 
 /* Logo */
 header .logo img{
@@ -38,21 +36,31 @@ header .logo img{
     width: auto;
 }
 
-header h1{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 50px;
-    margin: 0;
-    text-align: center;
-    color: blanchedalmond;
+header .ButtonMenu img{
+    height: 45px;
+    width: auto;
 }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+    /* header h1{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 50px;
+        margin: 0;
+        text-align: center;
+        color: blanchedalmond;
+    } */
 /* Enlaces de navegacion */
-header nav ul li{
-    display: inline-block;
-    padding: 10px;
-    font-size: 30px;
-    margin-top: 50px;
-    margin-left: 200px; 
-}
+        /* header nav ul li{
+            display: inline-block;
+            padding: 10px;
+            font-size: 30px;
+            margin-top: 50px;
+            margin-left: 200px; 
+        } */
 
 
 
@@ -102,29 +110,45 @@ main h2{
 
 /* Producto */
 
-.divProducto{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+main .divProducto{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.divImagenProducto{
-    margin: 20px;
-    justify-self: center;
+main .divImagenProducto img{
+    margin: 40px auto;
+    width: 60%;
+    display: block;
 }
 
-.divImagenProducto img{
-    margin: 20px;
-    width: 300px;
-}
-
-.divDescripcionProducto{
+main .divDescripcionProducto{
     margin-right: 250px;
-    justify-self: right;
-    align-self: start;
+    text-align: center;
+    margin-right: 0;
 }
 
-.divGenericoDescripcionProducto{
-    font-size: 16px;
+.divNombreDescripcionProducto h2{
+    align-items: center;
+    font-size: 40px;
+    /* flex-direction: column; */
+}
+
+.divPrecioDescripcionProducto h2{
+    align-items: center;
+    font-size: 30px;
+    /* flex-direction: column; */
+}
+
+.divGenericoDetalleDescripcionProducto{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.divParrafoDetalleDescripcionProducto{
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 /* Cuenta */
 
@@ -262,6 +286,5 @@ footer .wpp{
 }
 
 
-    
 
  
