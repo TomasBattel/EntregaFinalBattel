@@ -54,18 +54,12 @@ header .ButtonMenu img {
 }
 
 
-
-/* AGREGAR CARRITO AL LADO DE CONTACTO */
-
-
 /* MAIN */
 
 main{
     flex-grow: 1;
     margin-bottom: auto;
 }
-
-/* Futuro boton plegable */
 
 main h2{
     display: grid;
@@ -129,6 +123,10 @@ main h2{
 
 }
 
+
+.divBotonesDetalleDescripcionProducto button:hover {
+    background-color: darkblue;
+  }
 
 /* Cuenta */
 
