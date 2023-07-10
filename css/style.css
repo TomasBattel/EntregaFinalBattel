@@ -8,63 +8,50 @@
 
 
 /* Estilo global */
-body{
+body {
     background-color: blanchedalmond;
-    height: 100%;
-    min-height: 110vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-
-header{
-    height: 75px;
-    padding: 100px;
-    background-color: rgb(0, 0, 0);
+  
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 20px;
+    background-color: black;
 }
-
-/* 
-        header a{
-            text-decoration: none;
-            color: blanchedalmond;
-        }
-*/
-a{
-    text-decoration: none;
-    color: black;
-    }
-
-/* Logo */
-header .logo img{
-    height: 120px;
-    width: auto;
-}
-
-header .ButtonMenu img{
-    height: 45px;
-    width: auto;
-}
-
-a{
+  
+a {
     text-decoration: none;
     color: white;
+    margin-right: 20px;
+    font-size: 22px;
 }
-
-    /* header h1{
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 50px;
-        margin: 0;
-        text-align: center;
-        color: blanchedalmond;
-    } */
-/* Enlaces de navegacion */
-        /* header nav ul li{
-            display: inline-block;
-            padding: 10px;
-            font-size: 30px;
-            margin-top: 50px;
-            margin-left: 200px; 
-        } */
-
+  
+.dropdown-menu {
+    background-color: blanchedalmond;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+}
+  
+/* Logo */
+header .logo img {
+    height: 90px;
+    width: auto;
+    margin-right: 10px;
+}
+  
+header .ButtonMenu img {
+    height: 30px;
+    width: auto;
+}
 
 
 
@@ -89,7 +76,7 @@ main h2{
 
 }
 
-/* Productos */
+/* Index */
 
 .divProductos{
     text-align: center;
@@ -100,11 +87,12 @@ main h2{
 
 .divProductos .divProductoProductos {
     text-align: center;
+    margin-bottom: 20px;
   }
 
 .divProductoProductos img{
     margin-top: 20px;
-    width: 70%;    
+    width: 60%;    
 }
 
 .divProductos .divProductoProductos h3 {
@@ -144,18 +132,40 @@ main h2{
 
 /* Cuenta */
 
-.botones{
-    margin-top: 20px;
-    text-align: left;
-    margin-left: 30px;
+main.Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-
-.boton{
-    display: inline-block;
-    margin-right: 25px;
+  
+.FormLogin {
+    width: 400px;
+    padding: 20px;
+    background-color: blanchedalmond;
+    text-align: center;
 }
-
-
+  
+.FormLogin h1 {
+    margin-bottom: 200px;
+}
+  
+.FormLogin div {
+    margin-bottom: 50px;
+}
+  
+.BotonesFormLogin {
+    display: flex;
+    justify-content: center;
+}
+  
+.BotonBotonesFormLogin {
+    margin-right: 10px;
+}
+  
+.BotonBotonesFormLogin input[type="submit"] {
+    padding: 10px 20px;
+}
 
 
 /* Carrito */
