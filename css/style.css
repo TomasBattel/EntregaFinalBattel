@@ -369,3 +369,38 @@ footer .wpp img{
         font-size: 24px   
     }
 }
+
+/* MQ de Tablet */
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    /* Carrito para Tablet */
+    main .divCarrito {
+      grid-template-columns: 1fr;
+    }
+  
+    main .divCarrito .divPagofinalCarrito {
+      margin-top: 20px;
+      grid-column: 1;
+      grid-row: 4;
+    }
+
+    /* Producto para Tablet */
+
+    main .divProducto {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    main .divImagenProducto {
+        justify-self: center;
+    }
+    
+    main .divDescripcionProducto {
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    main .divBotonesDetalleDescripcionProducto {
+        margin-bottom: 20px;
+    }
+}
