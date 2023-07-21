@@ -299,6 +299,21 @@ footer .wpp img{
 
 @media screen and (max-width: 767px) {
 
+    /* Header */
+    
+
+    /* Productos para Mobile */
+
+    .divProductos {
+        grid-template-columns: 1fr;
+      }
+    
+      .divProductoProductos img {
+        width: 75%;
+      }
+    
+    
+
     /* Producto para Mobile */
     
     .divProducto {
@@ -368,7 +383,70 @@ footer .wpp img{
         margin-bottom: 10px;
         font-size: 24px   
     }
+
+    /* Cuenta para Mobile */
+
+    .FormLogin {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .FormLogin h2 {
+        margin-bottom: 30px;
+    }
+
+    .FormLogin div {
+        margin-bottom: 20px;
+    }
+
+    .BotonesFormLogin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .BotonBotonesFormLogin {
+        margin-bottom: 10px;
+    }
+
+    /* Contacto para mobile */
+
+    main.Formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divContenedorFormulario {
+        width: 90%;
+    }
+
+    /* Alinear el formulario en columnas */
+    .divContenedorFormulario form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Estilos para los campos del formulario */
+    .divContenedorFormulario label,
+    .divContenedorFormulario input {
+        margin-bottom: 10px;
+    }
+
+    .divMapaFormulario {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    /* Alinear el mapa en columnas */
+    .divMapaFormulario iframe,
+    .divMapaFormulario p {
+        display: block;
+        margin: 10px auto;
+    }
+
 }
+
 
 /* MQ de Tablet */
 
@@ -382,6 +460,12 @@ footer .wpp img{
       margin-top: 20px;
       grid-column: 1;
       grid-row: 4;
+    }
+
+    
+    .divCarrito .divPagofinalCarrito p {
+        margin-bottom: 10px;
+        font-size: 24px   
     }
 
     /* Producto para Tablet */
@@ -403,4 +487,102 @@ footer .wpp img{
     main .divBotonesDetalleDescripcionProducto {
         margin-bottom: 20px;
     }
+
+    /* Index para Tablet */
+
+  .divProductos {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+
+  .divProductoProductos img {
+    width: 80%;
+  }
+
+  .divDescripcionProducto {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .divGenericoDescripcionProducto {
+    font-size: 40px;
+  }
+
+  /* Cuenta para Tablet */
+
+      main.Login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .FormLogin {
+        width: 80%;
+        padding: 20px;
+        background-color: blanchedalmond;
+        text-align: center;
+    }
+
+    .FormLogin h2 {
+        margin-bottom: 30px;
+    }
+
+    .FormLogin div {
+        margin-bottom: 20px;
+    }
+
+    .BotonesFormLogin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .BotonBotonesFormLogin {
+        margin-bottom: 10px;
+    }
+
+    /* Contacto para Tablet */
+
+    main.Formulario {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .divContenedorFormulario {
+        width: 50%;
+    }
+
+    .divMapaFormulario {
+        width: 40%;
+        margin-top: 0;
+    }
+
+    /* Alinear el formulario en columnas */
+    .divContenedorFormulario form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Estilos para los campos del formulario */
+    .divContenedorFormulario label,
+    .divContenedorFormulario input {
+        margin-bottom: 10px;
+    }
+
+    /* Alinear el mapa en la parte superior */
+    .divMapaFormulario iframe,
+    .divMapaFormulario p {
+        display: block;
+        margin: 10px auto;
+    }
+
+    /* Alinear el pie de página */
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+    }
+
 }
