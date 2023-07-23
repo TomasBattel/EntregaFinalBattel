@@ -1,588 +1,355 @@
-
-/* RESET */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* Estilo global */
+@charset "UTF-8";
 body {
-    background-color: blanchedalmond;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-  
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    padding: 20px;
-    background-color: black;
-}
-  
+  background-color: blanchedalmond;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
 a {
-    text-decoration: none;
-    color: white;
-    margin-right: 20px;
-    font-size: 22px;
-}
-  
-.dropdown-menu {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  font-size: 22px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 20px;
+  background-color: black; }
+  header .dropdown-menu {
     background-color: blanchedalmond;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     max-height: 200px;
-    overflow-y: auto;
-}
-  
-/* Logo */
-header .logo img {
+    overflow-y: auto; }
+  header .logo img {
     height: 90px;
     width: auto;
-    margin-right: 10px;
-}
-  
-header .ButtonMenu img {
-    height: 30px;
-    width: auto;
-}
+    margin-right: 10px; }
+  header .ButtonMenu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2; }
+    header .ButtonMenu img {
+      height: 30px;
+      width: auto; }
 
-
-/* MAIN */
-
-main{
-    flex-grow: 1;
-    margin-bottom: auto;
-}
-
-main h2{
+main {
+  flex-grow: 1;
+  margin-bottom: auto; }
+  main h2 {
     display: grid;
     margin-top: 20px;
     margin-bottom: 50px;
     font-size: 50px;
-    font-style: italic;
-
-}
-
-/* Index */
-
-.divProductos{
+    font-style: italic; }
+  main .divProductos {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
-    grid-gap: 50px;
-}
-
-.divProductos .divProductoProductos {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-.divProductoProductos img{
-    margin-top: 20px;
-    width: 60%;    
-}
-
-.divProductos .divProductoProductos h3 {
-    font-size: 20px;
-    text-decoration: none;
-    color: black; 
-}
-
-/* Producto */
-
-.divProducto{
+    grid-gap: 50px; }
+    main .divProductos .divProductoProductos {
+      text-align: center;
+      margin-bottom: 20px; }
+      main .divProductos .divProductoProductos h3 {
+        font-style: 16px;
+        text-decoration: none;
+        color: black; }
+      main .divProductos .divProductoProductos img {
+        margin-top: 20px;
+        width: 60%; }
+  main .divProducto {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.divImagenProducto{
-    margin: 30px;
-    justify-self: center;
-}
-
-.divImagenProducto img{
-    margin: 30px;
-    width: 300px;
-}
-
-.divDescripcionProducto{
-    margin-right: 250px;
-    justify-self: right;
-    align-self: start;
-}
-
-.divGenericoDescripcionProducto{
-    font-size: 160px;
-
-}
-
-
-.divBotonesDetalleDescripcionProducto button:hover {
-    background-color: darkblue;
-  }
-
-/* Cuenta */
-
-main.Login {
+    grid-template-columns: 1fr 1fr; }
+    main .divProducto .divImagenProducto {
+      margin: 50px;
+      justify-self: center; }
+      main .divProducto .divImagenProducto img {
+        margin: 30px;
+        width: 380px;
+        height: 600px;
+        justify-content: center; }
+    main .divProducto .divDescripcionProducto {
+      margin-top: 75px;
+      margin-right: 250px;
+      justify-self: right;
+      align-self: start; }
+      main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divGenericoDetalleDescripcionProducto {
+        font-size: 22px;
+        font-weight: bold; }
+      main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divParrafoDetalleDescripcionProducto {
+        font-size: 20px; }
+      main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divBotonesDetalleDescripcionProducto button:hover {
+        background-color: darkblue; }
+  main .divLogin {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-  
-.FormLogin {
-    width: 400px;
-    padding: 20px;
-    background-color: blanchedalmond;
-    text-align: center;
-}
-  
-.FormLogin h1 {
-    margin-bottom: 200px;
-}
-  
-.FormLogin div {
-    margin-bottom: 50px;
-}
-  
-.BotonesFormLogin {
-    display: flex;
-    justify-content: center;
-}
-  
-.BotonBotonesFormLogin {
-    margin-right: 10px;
-}
-  
-.BotonBotonesFormLogin input[type="submit"] {
-    padding: 10px 20px;
-}
-
-
-/* Carrito */
-
-.divCarrito {
+    margin-bottom: 20px; }
+    main .divLogin .divFormLogin {
+      width: 400px;
+      padding: 20px;
+      background-color: blanchedalmond;
+      text-align: center; }
+      main .divLogin .divFormLogin h2 {
+        margin-top: 0; }
+      main .divLogin .divFormLogin .divUserFormLogin,
+      main .divLogin .divFormLogin .divPassFormLogin {
+        font-size: 28px; }
+      main .divLogin .divFormLogin .divUserFormLogin input[type="text"],
+      main .divLogin .divFormLogin .divPassFormLogin input[type="password"] {
+        width: 100%;
+        /* Ancho del 100% */
+        padding: 12px;
+        /* Espacio interno del campo */
+        font-size: 22px;
+        /* Tamaño de la fuente */
+        margin-bottom: 30px; }
+      main .divLogin .divFormLogin .BotonesFormLogin {
+        display: flex;
+        justify-content: center; }
+        main .divLogin .divFormLogin .BotonesFormLogin .BotonBotonesFormLogin {
+          margin-right: 10px; }
+          main .divLogin .divFormLogin .BotonesFormLogin .BotonBotonesFormLogin input[type="submit"] {
+            padding: 10px 20px; }
+  main .divCarrito {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    margin-left: 10px;
-}
-  
-.divCarrito .divProductoCarrito {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-  
-.divProductoCarrito img {
-    width: 200px;
-    height: 200px;
-    margin-right: 20px;
-    object-fit: cover;
-}
-  
-.divProductoCarritoEliminar {
-    margin-left: auto;
-}
-  
-.divCarrito .divPagofinalCarrito {
-    margin-top: 175px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    font-size: 24px;
-
-}
-
-
-
-/* Contacto */
-
-.Formulario{
+    margin-left: 10px; }
+    main .divCarrito .divProductoCarrito {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center; }
+      main .divCarrito .divProductoCarrito img {
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+        object-fit: cover; }
+      main .divCarrito .divProductoCarrito .divProductoCarritoEliminar {
+        margin-left: auto; }
+    main .divCarrito .divPagofinalCarrito {
+      margin-top: 175px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      font-size: 24px; }
+  main .divFormulario {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin-bottom: 50px;    
-}
-
-.divMenuContactoContenedorFormulario{
-    margin-top: 5px;
-    width: 300px;
-    grid-column: 1/2;
-}
-
-main fieldset legend{
-    font-size: 25px;
-}
-
-.divMapaFormulario{
-    margin-top: 200px;
-    grid-column: 2/3;
-}
-
-.divMapaFormulario p{
-    text-align: start;
-    font-size: 20px;
-}
-
-main form{
-    margin-left: 20px;
-}
-
-main form input[type="text"],
-main form input[type="email"],
-main form input[type="number"],
-main form input[type="password"] {
-  width: 500px;
-  padding: 10px;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-
-
-
-main form fieldset {
-    width: 300px;
-    padding: 10px;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-main .refprod{
-    margin-top: 20px;
-    margin-bottom: 50px;
-    font-size: 30px;
-}
-
-main .form-row {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 20px;
-}
-/* FOOTER */
-
-footer{
-    background-color: black;
-    padding: 10px 10px;
-    text-align: center;
-    color: blanchedalmond;
-    margin-top: auto;
-}
-
-footer div a{
-    color: blanchedalmond;
-}
-
-footer .wpp img{
-        position: fixed;
-        bottom: 2%;
-        right: 2%;
-        width: 75px;
-        z-index: 2;
-}
-
-
-/* MQ de Mobile */
-
-@media screen and (max-width: 767px) {
-
-    /* Header */
-    
-
-    /* Productos para Mobile */
-
-    .divProductos {
-        grid-template-columns: 1fr;
-      }
-    
-      .divProductoProductos img {
-        width: 75%;
-      }
-    
-    
-
-    /* Producto para Mobile */
-    
-    .divProducto {
+    margin-bottom: 50px; }
+    main .divFormulario .divMenuContactoContenedorFormulario {
+      margin-top: 5px;
+      grid-column: 1/2; }
+    main .divFormulario form div {
+      margin-bottom: 10px;
+      width: 80%; }
+    main .divFormulario form input[type="text"],
+    main .divFormulario form input[type="email"],
+    main .divFormulario form input[type="number"],
+    main .divFormulario form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      margin-bottom: 10px; }
+    main .divFormulario form fieldset {
+      padding: 10px;
+      font-size: 22px;
+      margin-bottom: 10px; }
+    main .divFormulario form .divBotonFormulario {
       display: flex;
-      flex-direction: column;
-    }
-  
-    .divImagenProducto {
-      margin: 40px auto;
-      width: 60%;
-      display: block;
-    }
-  
-    .divDescripcionProducto {
-      margin-right: 0;
-      text-align: center;
-    }
-  
-    .divGenericoDescripcionProducto {
-      font-size: 40px;
-    }
-    
-    .divBotonesDetalleDescripcionProducto{
-        margin-bottom: 20px;
-    }
+      justify-content: center; }
+      main .divFormulario form .divBotonFormulario input[type="submit"] {
+        padding: 10px 20px;
+        margin-left: 20px; }
+    main .divFormulario .divMapaFormulario {
+      grid-column: 2;
+      align-self: center;
+      margin-top: 20px; }
+      main .divFormulario .divMapaFormulario p {
+        align-self: center;
+        font-size: 24px; }
 
-
-    /* Carrito para Mobile */
-
-
-    .divCarrito {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 10px;
-    }
-      
-    .divCarrito .divProductoCarrito {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-      
-    .divCarrito .divProductoCarrito img {
-        width: 150px;
-        margin-right: 10px;
-        object-fit: cover;
-    }
-    
-    .divCarrito .divProductoCarritoEliminar {
-        margin-left: 200px;
-        size: 10px;
-    }
-    
-    .divCarrito .divPagofinalCarrito{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .divCarrito .divPagofinalCarrito p {
-        margin-bottom: 10px;
-        font-size: 24px   
-    }
-
-    /* Cuenta para Mobile */
-
-    .FormLogin {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .FormLogin h2 {
-        margin-bottom: 30px;
-    }
-
-    .FormLogin div {
-        margin-bottom: 20px;
-    }
-
-    .BotonesFormLogin {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .BotonBotonesFormLogin {
-        margin-bottom: 10px;
-    }
-
-    /* Contacto para mobile */
-
-    main.Formulario {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .divContenedorFormulario {
-        width: 90%;
-    }
-
-    /* Alinear el formulario en columnas */
-    .divContenedorFormulario form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Estilos para los campos del formulario */
-    .divContenedorFormulario label,
-    .divContenedorFormulario input {
-        margin-bottom: 10px;
-    }
-
-    .divMapaFormulario {
-        width: 90%;
-        margin-top: 20px;
-    }
-
-    /* Alinear el mapa en columnas */
-    .divMapaFormulario iframe,
-    .divMapaFormulario p {
-        display: block;
-        margin: 10px auto;
-    }
-
-}
-
-
-/* MQ de Tablet */
+footer {
+  background-color: black;
+  padding: 10px 10px;
+  text-align: center;
+  margin-top: auto; }
+  footer .contenededor {
+    color: blanchedalmond; }
+  footer .wpp img {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: 75px;
+    z-index: 2; }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-    /* Carrito para Tablet */
-    main .divCarrito {
-      grid-template-columns: 1fr;
-    }
-  
+  main .divProductos {
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); }
+    main .divProductos .divProductoProductos img {
+      width: 70%; }
+    main .divProductos .divProductoProductos h3 {
+      font-size: 20px; }
+  main .divProducto {
+    display: grid;
+    grid-template-columns: 1fr; }
+    main .divProducto .divImagenProducto {
+      justify-self: center; }
+    main .divProducto .divDescripcionProducto {
+      margin-right: 0;
+      text-align: center; }
+      main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divBotonesDetalleDescripcionProducto {
+        margin-bottom: 20px; }
+  main .divLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; }
+    main .divLogin .divFormLogin {
+      width: 80%;
+      padding: 20px;
+      background-color: blanchedalmond;
+      text-align: center; }
+      main .divLogin .divFormLogin h2 {
+        margin-bottom: 30px; }
+      main .divLogin .divFormLogin .divUserFormLogin,
+      main .divLogin .divFormLogin .divPassFormLogin {
+        margin-bottom: 20px; }
+      main .divLogin .divFormLogin .BotonBotonesFormLogin {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        main .divLogin .divFormLogin .BotonBotonesFormLogin .BotonBotonesFormLogin {
+          margin-bottom: 10px; }
+  main .divFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .divFormulario .divContenedorFormulario {
+      width: 90%; }
+      main .divFormulario .divContenedorFormulario form {
+        display: flex;
+        flex-direction: column; }
+        main .divFormulario .divContenedorFormulario form .divContenedorFormulario label,
+        main .divFormulario .divContenedorFormulario form .divContenedorFormulario input {
+          margin-bottom: 10px; }
+    main .divFormulario .divMapaFormulario {
+      width: 90%;
+      margin-top: 20px; }
+      main .divFormulario .divMapaFormulario iframe,
+      main .divFormulario .divMapaFormulario p {
+        width: 500px;
+        display: block;
+        margin: 10px auto; }
+    main .divFormulario .divCarrito {
+      grid-template-columns: 1fr; }
+      main .divFormulario .divCarrito .divPagofinalCarrito {
+        margin-top: 20px;
+        grid-column: 1;
+        grid-row: 4; }
+        main .divFormulario .divCarrito .divPagofinalCarrito p {
+          margin-bottom: 10px;
+          font-style: 24px; }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; } }
+
+@media screen and (max-width: 767px) {
+  main .divProductos {
+    grid-template-columns: 1fr; }
+    main .divProductos .divProductoProductos img {
+      width: 60%; }
+    main .divProductos .divProductoProductos h3 {
+      font-size: 80%; }
+  main .divProducto {
+    display: flex;
+    flex-direction: column; }
+    main .divProducto .divImagenProducto {
+      width: 50%;
+      display: block;
+      justify-content: start; }
+    main .divProducto .divDescripcionProducto {
+      margin-right: 0;
+      text-align: center;
+      margin-top: 0; }
+      main .divProducto .divDescripcionProducto .divBotonesDetalleDescripcionProducto {
+        margin-bottom: 40px; }
+  main .divCarrito {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px; }
+    main .divCarrito .divProductoCarrito {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center; }
+      main .divCarrito .divProductoCarrito img {
+        width: 150px;
+        margin-right: 10px;
+        object-fit: cover; }
+      main .divCarrito .divProductoCarrito .divProductoCarritoEliminar {
+        margin-left: 200px;
+        size: 10px; }
     main .divCarrito .divPagofinalCarrito {
-      margin-top: 20px;
-      grid-column: 1;
-      grid-row: 4;
-    }
-
-    
-    .divCarrito .divPagofinalCarrito p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center; }
+      main .divCarrito .divPagofinalCarrito p {
         margin-bottom: 10px;
-        font-size: 24px   
-    }
-
-    /* Producto para Tablet */
-
-    main .divProducto {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    
-    main .divImagenProducto {
-        justify-self: center;
-    }
-    
-    main .divDescripcionProducto {
-        text-align: center;
-        margin-right: 0;
-    }
-    
-    main .divBotonesDetalleDescripcionProducto {
-        margin-bottom: 20px;
-    }
-
-    /* Index para Tablet */
-
-  .divProductos {
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
-  }
-
-  .divProductoProductos img {
+        font-size: 24px; }
+  main .divLogin .divFormLogin {
     width: 80%;
-  }
-
-  .divDescripcionProducto {
-    margin-right: 0;
-    text-align: center;
-  }
-
-  .divGenericoDescripcionProducto {
-    font-size: 40px;
-  }
-
-  /* Cuenta para Tablet */
-
-      main.Login {
+    padding: 20px;
+    background-color: blanchedalmond;
+    text-align: center; }
+    main .divLogin .divFormLogin h2 {
+      margin-bottom: 30px; }
+    main .divLogin .divFormLogin .divUserFormLogin,
+    main .divLogin .divFormLogin .divPassFormLogin {
+      margin-bottom: 20px; }
+    main .divLogin .divFormLogin .BotonBotonesFormLogin {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      main .divLogin .divFormLogin .BotonBotonesFormLogin .BotonBotonesFormLogin {
+        margin-bottom: 10px; }
+  main .divFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .divFormulario .divContenedorFormulario {
+      width: 90%; }
+      main .divFormulario .divContenedorFormulario form {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .FormLogin {
-        width: 80%;
-        padding: 20px;
-        background-color: blanchedalmond;
-        text-align: center;
-    }
-
-    .FormLogin h2 {
-        margin-bottom: 30px;
-    }
-
-    .FormLogin div {
-        margin-bottom: 20px;
-    }
-
-    .BotonesFormLogin {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .BotonBotonesFormLogin {
-        margin-bottom: 10px;
-    }
-
-    /* Contacto para Tablet */
-
-    main.Formulario {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-
-    .divContenedorFormulario {
-        width: 50%;
-    }
-
-    .divMapaFormulario {
-        width: 40%;
-        margin-top: 0;
-    }
-
-    /* Alinear el formulario en columnas */
-    .divContenedorFormulario form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Estilos para los campos del formulario */
-    .divContenedorFormulario label,
-    .divContenedorFormulario input {
-        margin-bottom: 10px;
-    }
-
-    /* Alinear el mapa en la parte superior */
-    .divMapaFormulario iframe,
-    .divMapaFormulario p {
+        flex-direction: column; }
+        main .divFormulario .divContenedorFormulario form .divContenedorFormulario label,
+        main .divFormulario .divContenedorFormulario form .divContenedorFormulario input {
+          margin-bottom: 10px; }
+    main .divFormulario .divMapaFormulario {
+      width: 90%;
+      margin-top: 20px; }
+      main .divFormulario .divMapaFormulario iframe,
+      main .divFormulario .divMapaFormulario p {
+        width: 310px;
         display: block;
         margin: 10px auto;
-    }
-
-    /* Alinear el pie de página */
-    footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80px;
-    }
-
-}
+        font-size: 18px; } }
