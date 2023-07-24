@@ -1,5 +1,7 @@
+@import "./utilidades/variables";
+
 body{
-    background-color: blanchedalmond;   //
+    background-color: $color-principal; 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -7,9 +9,9 @@ body{
 
 a {
     text-decoration: none;
-    color: white;       //
-    margin-right: 20px; //
-    font-size: 22px;    //
+    color: white;       
+    margin-right: 20px; 
+    font-size: 22px;    
 }
 
 // HEADER
@@ -20,16 +22,14 @@ header{
     align-items: center;
     height: 100px;
     padding: 20px;
-    background-color: black;   //
+    background-color: $color-secundario; 
 
     .dropdown-menu{
-        background-color: blanchedalmond;
-        position: absolute;
+        background-color: $color-principal;
         top: 100%;
         left: 0;
         width: 100%;
         max-height: 200px;
-        overflow-y: auto;
     }
 
     .logo img{
@@ -43,8 +43,10 @@ header{
         align-items: center;
         cursor: pointer;
         z-index: 2;
-    
-        // Estilo del icono del menú hamburguesa (ajústalo según tus necesidades)
+        position: absolute;
+        top: 45px;
+        margin-left: 220%;
+        // Estilo del icono del menú hamburguesa
         img {
           height: 30px;
           width: auto;
@@ -73,17 +75,26 @@ main{
         display: grid;
         grid-template-columns: repeat(3, minmax(300px, 1fr));
         grid-gap: 50px;
+        position: relative;
+        overflow: hidden;
         .divProductoProductos{
             text-align: center;
             margin-bottom: 20px;
             h3{
                 font-style: 16px;
+                color: $color-secundario;
+            }
+            a{
                 text-decoration: none;
-                color: black;
             }
             img{
                 margin-top: 20px;
                 width: 60%;
+                transition: transform 0.3s ease;
+            }
+            &:hover img{
+                transform: scale(1.1);
+                margin-bottom: 30px;
             }
         }
 
@@ -136,7 +147,7 @@ main{
         .divFormLogin{
             width: 400px;
             padding: 20px;
-            background-color: blanchedalmond; //Color principal
+            background-color: $color-principal; 
             text-align: center;
             h2{         //H1 POR H2
                 margin-top: 0;
@@ -255,12 +266,16 @@ main{
 }
 
 footer{
-    background-color: black; //Color secundario    
+    background-color: $color-secundario;   
     padding: 10px 10px;
     text-align: center;
     margin-top: auto;
     .contenededor{          // ARREGLAR EN FOOTER MAL TIPEO
-        color: blanchedalmond; //Color principal
+        color: $color-principal;
+        a{
+            text-decoration: none;
+            color: $color-principal;
+        }
     }
 
     .wpp{
@@ -316,7 +331,7 @@ footer{
             .divFormLogin{
                 width: 80%;
                 padding: 20px;
-                background-color: blanchedalmond; // COlor principal
+                background-color: $color-principal; 
                 text-align: center;
                 h2{
                     margin-bottom: 30px;
@@ -391,7 +406,11 @@ footer{
 //MQ para Mobile
 
 @media screen and (max-width: 767px) {
-
+    header{
+        .ButtonMenu {
+            margin-left: 120%;
+        } 
+    }
     main{
         .divProductos{
             grid-template-columns: 1fr;
@@ -400,7 +419,7 @@ footer{
                     width: 60%;
                 }
                 h3{
-                    font-size: 80%;
+                    font-size: 130%;
                 }
             }
         }
@@ -412,9 +431,10 @@ footer{
                 // margin: 40px auto;
                 width: 50%;
                 display: block;
-                justify-content: start;
+                justify-content: center;
             }
             .divDescripcionProducto{
+                align-items: center;
                 margin-right: 0;
                 text-align: center;
                 margin-top: 0;
@@ -512,3 +532,4 @@ footer{
         }  
     }
 }
+

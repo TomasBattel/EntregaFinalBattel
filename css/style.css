@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  background-color: blanchedalmond;
+  background-color: #FFEBCD;
   min-height: 100vh;
   display: flex;
   flex-direction: column; }
@@ -17,15 +17,13 @@ header {
   align-items: center;
   height: 100px;
   padding: 20px;
-  background-color: black; }
+  background-color: #000000; }
   header .dropdown-menu {
-    background-color: blanchedalmond;
-    position: absolute;
+    background-color: #FFEBCD;
     top: 100%;
     left: 0;
     width: 100%;
-    max-height: 200px;
-    overflow-y: auto; }
+    max-height: 200px; }
   header .logo img {
     height: 90px;
     width: auto;
@@ -34,7 +32,10 @@ header {
     display: flex;
     align-items: center;
     cursor: pointer;
-    z-index: 2; }
+    z-index: 2;
+    position: absolute;
+    top: 45px;
+    margin-left: 220%; }
     header .ButtonMenu img {
       height: 30px;
       width: auto; }
@@ -52,17 +53,24 @@ main {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
-    grid-gap: 50px; }
+    grid-gap: 50px;
+    position: relative;
+    overflow: hidden; }
     main .divProductos .divProductoProductos {
       text-align: center;
       margin-bottom: 20px; }
       main .divProductos .divProductoProductos h3 {
         font-style: 16px;
-        text-decoration: none;
-        color: black; }
+        color: #000000; }
+      main .divProductos .divProductoProductos a {
+        text-decoration: none; }
       main .divProductos .divProductoProductos img {
         margin-top: 20px;
-        width: 60%; }
+        width: 60%;
+        transition: transform 0.3s ease; }
+      main .divProductos .divProductoProductos:hover img {
+        transform: scale(1.1);
+        margin-bottom: 30px; }
   main .divProducto {
     display: grid;
     grid-template-columns: 1fr 1fr; }
@@ -94,7 +102,7 @@ main {
     main .divLogin .divFormLogin {
       width: 400px;
       padding: 20px;
-      background-color: blanchedalmond;
+      background-color: #FFEBCD;
       text-align: center; }
       main .divLogin .divFormLogin h2 {
         margin-top: 0; }
@@ -182,12 +190,15 @@ main {
         font-size: 24px; }
 
 footer {
-  background-color: black;
+  background-color: #000000;
   padding: 10px 10px;
   text-align: center;
   margin-top: auto; }
   footer .contenededor {
-    color: blanchedalmond; }
+    color: #FFEBCD; }
+    footer .contenededor a {
+      text-decoration: none;
+      color: #FFEBCD; }
   footer .wpp img {
     position: fixed;
     bottom: 2%;
@@ -220,7 +231,7 @@ footer {
     main .divLogin .divFormLogin {
       width: 80%;
       padding: 20px;
-      background-color: blanchedalmond;
+      background-color: #FFEBCD;
       text-align: center; }
       main .divLogin .divFormLogin h2 {
         margin-bottom: 30px; }
@@ -269,20 +280,23 @@ footer {
     height: 80px; } }
 
 @media screen and (max-width: 767px) {
+  header .ButtonMenu {
+    margin-left: 120%; }
   main .divProductos {
     grid-template-columns: 1fr; }
     main .divProductos .divProductoProductos img {
       width: 60%; }
     main .divProductos .divProductoProductos h3 {
-      font-size: 80%; }
+      font-size: 130%; }
   main .divProducto {
     display: flex;
     flex-direction: column; }
     main .divProducto .divImagenProducto {
       width: 50%;
       display: block;
-      justify-content: start; }
+      justify-content: center; }
     main .divProducto .divDescripcionProducto {
+      align-items: center;
       margin-right: 0;
       text-align: center;
       margin-top: 0; }
