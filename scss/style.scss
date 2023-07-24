@@ -2,11 +2,6 @@
 @import"./utilidades/mixin";
 @import"./utilidades/extend";
 
-*{
-    padding: 0;
-    height: 0;
-    box-sizing: border-box;
-}
 
 body{
     background-color: $color-principal; 

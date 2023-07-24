@@ -8,11 +8,6 @@ main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divBot
   background-color: darkblue;
   color: white; }
 
-* {
-  padding: 0;
-  height: 0;
-  box-sizing: border-box; }
-
 body {
   background-color: #FFEBCD;
   min-height: 100vh;
