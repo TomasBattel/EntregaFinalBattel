@@ -1,4 +1,18 @@
 @charset "UTF-8";
+main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divParrafoDetalleDescripcionProducto, main .divLogin .divFormLogin .BotonesFormLogin .BotonBotonesFormLogin .button, main .divCarrito .divPagofinalCarrito .button, main .divFormulario form .divBotonFormulario input[type="submit"],
+main .divFormulario form .divBotonFormulario input[type="reset"] {
+  padding: 10px 20px;
+  font-size: 24px; }
+
+main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divBotonesDetalleDescripcionProducto button:hover, main .divLogin .divFormLogin .BotonesFormLogin .BotonBotonesFormLogin :hover, main .divCarrito .divPagofinalCarrito :hover, main .divFormulario form .divBotonFormulario:hover {
+  background-color: darkblue;
+  color: white; }
+
+* {
+  padding: 0;
+  height: 0;
+  box-sizing: border-box; }
+
 body {
   background-color: #FFEBCD;
   min-height: 100vh;
@@ -90,10 +104,6 @@ main {
       main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divGenericoDetalleDescripcionProducto {
         font-size: 22px;
         font-weight: bold; }
-      main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divParrafoDetalleDescripcionProducto {
-        font-size: 20px; }
-      main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divBotonesDetalleDescripcionProducto button:hover {
-        background-color: darkblue; }
   main .divLogin {
     display: flex;
     justify-content: center;
@@ -120,7 +130,8 @@ main {
         margin-bottom: 30px; }
       main .divLogin .divFormLogin .BotonesFormLogin {
         display: flex;
-        justify-content: center; }
+        justify-content: center;
+        align-items: center; }
         main .divLogin .divFormLogin .BotonesFormLogin .BotonBotonesFormLogin {
           margin-right: 10px; }
           main .divLogin .divFormLogin .BotonesFormLogin .BotonBotonesFormLogin input[type="submit"] {
@@ -132,10 +143,10 @@ main {
     margin-left: 10px; }
     main .divCarrito .divProductoCarrito {
       display: flex;
+      justify-content: center;
       align-items: center;
       width: 100%;
-      margin-bottom: 20px;
-      text-align: center; }
+      margin-bottom: 20px; }
       main .divCarrito .divProductoCarrito img {
         width: 200px;
         height: 200px;
@@ -144,11 +155,11 @@ main {
       main .divCarrito .divProductoCarrito .divProductoCarritoEliminar {
         margin-left: auto; }
     main .divCarrito .divPagofinalCarrito {
-      margin-top: 175px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      margin-top: 175px;
+      flex-direction: column;
       grid-column: 2;
       grid-row: 1 / span 2;
       font-size: 24px; }
@@ -177,9 +188,10 @@ main {
       margin-bottom: 10px; }
     main .divFormulario form .divBotonFormulario {
       display: flex;
-      justify-content: center; }
-      main .divFormulario form .divBotonFormulario input[type="submit"] {
-        padding: 10px 20px;
+      justify-content: center;
+      align-items: center; }
+      main .divFormulario form .divBotonFormulario input[type="submit"],
+      main .divFormulario form .divBotonFormulario input[type="reset"] {
         margin-left: 20px; }
     main .divFormulario .divMapaFormulario {
       grid-column: 2;
@@ -214,19 +226,24 @@ footer {
     main .divProductos .divProductoProductos h3 {
       font-size: 20px; }
   main .divProducto {
-    display: grid;
-    grid-template-columns: 1fr; }
-    main .divProducto .divImagenProducto {
-      justify-self: center; }
-    main .divProducto .divDescripcionProducto {
-      margin-right: 0;
-      text-align: center; }
-      main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divBotonesDetalleDescripcionProducto {
-        margin-bottom: 20px; }
-  main .divLogin {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; }
+    main .divProducto .divImagenProducto {
+      display: flex;
+      justify-content: center; }
+    main .divProducto .divDescripcionProducto {
+      width: 100%;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto {
+        text-align: center; }
+        main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divBotonesDetalleDescripcionProducto {
+          text-align: center;
+          margin-bottom: 20px; }
+  main .divLogin {
     height: 50vh; }
     main .divLogin .divFormLogin {
       width: 80%;
@@ -239,19 +256,18 @@ footer {
       main .divLogin .divFormLogin .divPassFormLogin {
         margin-bottom: 20px; }
       main .divLogin .divFormLogin .BotonBotonesFormLogin {
-        display: flex;
         flex-direction: column;
         align-items: center; }
         main .divLogin .divFormLogin .BotonBotonesFormLogin .BotonBotonesFormLogin {
           margin-bottom: 10px; }
   main .divFormulario {
     display: flex;
-    flex-direction: column;
-    align-items: center; }
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
     main .divFormulario .divContenedorFormulario {
       width: 90%; }
       main .divFormulario .divContenedorFormulario form {
-        display: flex;
         flex-direction: column; }
         main .divFormulario .divContenedorFormulario form .divContenedorFormulario label,
         main .divFormulario .divContenedorFormulario form .divContenedorFormulario input {
@@ -307,23 +323,17 @@ footer {
     flex-wrap: wrap;
     margin-left: 10px; }
     main .divCarrito .divProductoCarrito {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 20px;
-      text-align: center; }
+      width: 80%;
+      margin-bottom: 20px; }
       main .divCarrito .divProductoCarrito img {
         width: 150px;
         margin-right: 10px;
         object-fit: cover; }
       main .divCarrito .divProductoCarrito .divProductoCarritoEliminar {
-        margin-left: 200px;
+        margin-left: 80px;
         size: 10px; }
     main .divCarrito .divPagofinalCarrito {
-      display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       width: 100%;
       margin-bottom: 20px;
       text-align: center; }
@@ -332,32 +342,24 @@ footer {
         font-size: 24px; }
   main .divLogin .divFormLogin {
     width: 80%;
-    padding: 20px;
-    background-color: blanchedalmond;
-    text-align: center; }
+    padding: 20px; }
     main .divLogin .divFormLogin h2 {
       margin-bottom: 30px; }
     main .divLogin .divFormLogin .divUserFormLogin,
     main .divLogin .divFormLogin .divPassFormLogin {
-      margin-bottom: 20px; }
-    main .divLogin .divFormLogin .BotonBotonesFormLogin {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      main .divLogin .divFormLogin .BotonBotonesFormLogin .BotonBotonesFormLogin {
-        margin-bottom: 10px; }
+      margin-bottom: 20px;
+      font-style: 12px; }
+    main .divLogin .divFormLogin .BotonBotonesFormLogin .BotonBotonesFormLogin {
+      margin-bottom: 10px; }
   main .divFormulario {
     display: flex;
     flex-direction: column;
     align-items: center; }
     main .divFormulario .divContenedorFormulario {
       width: 90%; }
-      main .divFormulario .divContenedorFormulario form {
-        display: flex;
-        flex-direction: column; }
-        main .divFormulario .divContenedorFormulario form .divContenedorFormulario label,
-        main .divFormulario .divContenedorFormulario form .divContenedorFormulario input {
-          margin-bottom: 10px; }
+      main .divFormulario .divContenedorFormulario form .divContenedorFormulario label,
+      main .divFormulario .divContenedorFormulario form .divContenedorFormulario input {
+        margin-bottom: 10px; }
     main .divFormulario .divMapaFormulario {
       width: 90%;
       margin-top: 20px; }

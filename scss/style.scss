@@ -1,4 +1,12 @@
 @import "./utilidades/variables";
+@import"./utilidades/mixin";
+@import"./utilidades/extend";
+
+*{
+    padding: 0;
+    height: 0;
+    box-sizing: border-box;
+}
 
 body{
     background-color: $color-principal; 
@@ -110,7 +118,7 @@ main{
             justify-self: center;
             img{
                 margin: 30px;
-                width: 380px;       // tamaño predeterminado imagen
+                width: 380px;   
                 height: 600px;
                 justify-content: center;
             }
@@ -126,10 +134,10 @@ main{
                     font-weight: bold;
                 }
                 .divParrafoDetalleDescripcionProducto{
-                    font-size: 20px;
+                    @extend %boton;         //BOTON
                 }
                 .divBotonesDetalleDescripcionProducto button:hover{
-                    background-color: darkblue; //color predeterminado botones
+                    @extend %boton-hover;  // background-color: darkblue; //color predeterminado botones
                 }
                 
             }
@@ -140,9 +148,7 @@ main{
     // Cuenta
 
     .divLogin{      //Cambio de clases
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
         margin-bottom: 20px;
         .divFormLogin{
             width: 400px;
@@ -164,12 +170,17 @@ main{
                 margin-bottom: 30px;
             }
             .BotonesFormLogin{
-                display: flex;
-                justify-content: center;
+                @include flex;
                 .BotonBotonesFormLogin{
                     margin-right: 10px;
                     input[type="submit"]{ 
                         padding: 10px 20px;
+                    }
+                    .button{
+                        @extend %boton;
+                    }
+                    :hover{
+                        @extend %boton-hover;
                     }
                 }
             }
@@ -184,11 +195,9 @@ main{
         grid-gap: 10px;
         margin-left: 10px;
         .divProductoCarrito{
-            display: flex;
-            align-items: center;
+            @include flex;
             width: 100%;
             margin-bottom: 20px;
-            text-align: center;
             img{
                 width: 200px;   //Global
                 height: 200px;
@@ -200,18 +209,23 @@ main{
             }
         }
         .divPagofinalCarrito{
+            @include flex;
             margin-top: 175px;
-            display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             grid-column: 2;
             grid-row: 1 / span 2;
             font-size: 24px;
+            .button{
+                @extend %boton;
+            }
+            :hover{
+                    @extend %boton-hover;
+            }
+    
         }
     }
-
-    //Contacto CAMBIO EN HTML / AGREGAR REDES SOCIALES PARA EF
+    
+    //Contacto / AGREGAR REDES SOCIALES PARA EF
 
     .divFormulario {
         display: grid;
@@ -243,11 +257,15 @@ main{
             }
 
             .divBotonFormulario{
-                display: flex;
-                justify-content: center;
-                input[type="submit"]{
-                    padding: 10px 20px;
+                @include flex;
+                input[type="submit"],
+                input[type="reset"]{       //RESTABLECER
                     margin-left: 20px;
+                    @extend %boton;
+
+                }
+                &:hover{
+                    @extend %boton-hover;
                 }
             } 
         }         
@@ -306,16 +324,21 @@ footer{
             }
         }
         .divProducto{
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
             .divImagenProducto{
-                justify-self: center;
+                display: flex;
+                justify-content: center;
             }
             .divDescripcionProducto{
-                margin-right: 0;
-                text-align: center;
+                width: 100%;
+                margin-right: 10px;
+                @include flex;
+                flex-direction: column;
                 .divDetalleDescripcionProducto{
+                    text-align: center;
                     .divBotonesDetalleDescripcionProducto{      //Boton
+                        text-align: center;
                         margin-bottom: 20px;
                     }
                 }
@@ -324,9 +347,6 @@ footer{
         }
         
         .divLogin{
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 50vh;
             .divFormLogin{
                 width: 80%;
@@ -341,7 +361,7 @@ footer{
                     margin-bottom: 20px;
                 }
                 .BotonBotonesFormLogin{
-                    display: flex;
+                    
                     flex-direction: column;
                     align-items: center;
                     .BotonBotonesFormLogin{
@@ -352,13 +372,11 @@ footer{
         }
 
         .divFormulario{     //ARREGLAR
-            display: flex;
+            @include flex;
             flex-direction: column;
-            align-items: center;
             .divContenedorFormulario{
                 width: 90%;
                 form{
-                    display: flex;
                     flex-direction: column;
                     .divContenedorFormulario label,
                     .divContenedorFormulario input{
@@ -395,9 +413,7 @@ footer{
         
     }
     .footer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
         height: 80px;
     }
 
@@ -449,26 +465,20 @@ footer{
             flex-wrap: wrap;
             margin-left: 10px;
             .divProductoCarrito{
-                display: flex;
-                align-items: center;
-                width: 100%;
+                width: 80%;
                 margin-bottom: 20px;
-                text-align: center;
                 img{
                     width: 150px;
                     margin-right: 10px;
                     object-fit: cover;
                 }       
                 .divProductoCarritoEliminar{        //Tacho de basura
-                    margin-left: 200px;
+                    margin-left: 80px;
                     size: 10px;
                 }
             }
             .divPagofinalCarrito{
-                display: flex;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
                 width: 100%;
                 margin-bottom: 20px;
                 text-align: center;
@@ -483,20 +493,16 @@ footer{
             .divFormLogin{
                 width: 80%;
                 padding: 20px;
-                background-color: blanchedalmond; // COlor principal
-                text-align: center;
                 h2{
                     margin-bottom: 30px;
                 }
                 .divUserFormLogin,
                 .divPassFormLogin{
                     margin-bottom: 20px;
+                    font-style: 12px;     //
                 }
                 .BotonBotonesFormLogin{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    .BotonBotonesFormLogin{
+                    .BotonBotonesFormLogin{     //
                         margin-bottom: 10px;
                     }
                 }
@@ -510,8 +516,6 @@ footer{
             .divContenedorFormulario{
                 width: 90%;
                 form{
-                    display: flex;
-                    flex-direction: column;
                     .divContenedorFormulario label,
                     .divContenedorFormulario input{
                         margin-bottom: 10px;
