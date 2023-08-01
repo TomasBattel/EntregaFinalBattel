@@ -44,7 +44,8 @@ header {
     z-index: 2;
     position: absolute;
     top: 45px;
-    margin-left: 220%; }
+    margin-left: 10px;
+    justify-content: flex-end; }
     header .ButtonMenu img {
       height: 30px;
       width: auto; }
@@ -57,7 +58,7 @@ main {
     margin-top: 20px;
     margin-bottom: 50px;
     font-size: 50px;
-    font-style: italic; }
+    text-align: center; }
   main .divProductos {
     text-align: center;
     display: grid;
@@ -166,6 +167,8 @@ main {
     main .divFormulario .divMenuContactoContenedorFormulario {
       margin-top: 5px;
       grid-column: 1/2; }
+      main .divFormulario .divMenuContactoContenedorFormulario h2 {
+        text-align: center; }
     main .divFormulario form div {
       margin-bottom: 10px;
       width: 80%; }
@@ -291,8 +294,6 @@ footer {
     height: 80px; } }
 
 @media screen and (max-width: 767px) {
-  header .ButtonMenu {
-    margin-left: 120%; }
   main .divProductos {
     grid-template-columns: 1fr; }
     main .divProductos .divProductoProductos img {
@@ -303,9 +304,13 @@ footer {
     display: flex;
     flex-direction: column; }
     main .divProducto .divImagenProducto {
-      width: 50%;
+      margin: 40px auto;
       display: block;
       justify-content: center; }
+      main .divProducto .divImagenProducto img {
+        justify-content: center;
+        width: 220px;
+        height: 350px; }
     main .divProducto .divDescripcionProducto {
       align-items: center;
       margin-right: 0;
@@ -326,7 +331,7 @@ footer {
         object-fit: cover; }
       main .divCarrito .divProductoCarrito .divProductoCarritoEliminar {
         margin-left: 80px;
-        size: 10px; }
+        size: 8px; }
     main .divCarrito .divPagofinalCarrito {
       flex-direction: column;
       width: 100%;
@@ -344,7 +349,10 @@ footer {
     main .divLogin .divFormLogin .divPassFormLogin {
       margin-bottom: 20px;
       font-style: 12px; }
-    main .divLogin .divFormLogin .BotonBotonesFormLogin .BotonBotonesFormLogin {
+    main .divLogin .divFormLogin .divBotonesFormLogin .BotonBotonesFormLogin {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-bottom: 10px; }
   main .divFormulario {
     display: flex;
