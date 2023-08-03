@@ -1,15 +1,15 @@
 @charset "UTF-8";
-main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divParrafoDetalleDescripcionProducto, main .divLogin .divFormLogin .BotonesFormLogin .BotonBotonesFormLogin .button, main .divCarrito .divPagofinalCarrito .button, main .divFormulario form .divBotonFormulario input[type="submit"],
-main .divFormulario form .divBotonFormulario input[type="reset"] {
+main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divParrafoDetalleDescripcionProducto, main .divLogin .divFormLogin .BotonesFormLogin .BotonBotonesFormLogin .button, main .divCarrito .divPagofinalCarrito .button, main .divFormulario .divContenedorFormulario form .divBotonFormulario input[type="submit"],
+main .divFormulario .divContenedorFormulario form .divBotonFormulario input[type="reset"] {
   padding: 10px 20px;
   font-size: 24px; }
 
-main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divBotonesDetalleDescripcionProducto button:hover, main .divLogin .divFormLogin .BotonesFormLogin .BotonBotonesFormLogin :hover, main .divCarrito .divPagofinalCarrito :hover, main .divFormulario form .divBotonFormulario:hover {
+main .divProducto .divDescripcionProducto .divDetalleDescripcionProducto .divBotonesDetalleDescripcionProducto button:hover, main .divLogin .divFormLogin .BotonesFormLogin .BotonBotonesFormLogin :hover, main .divCarrito .divPagofinalCarrito :hover, main .divFormulario .divContenedorFormulario form .divBotonFormulario:hover {
   background-color: darkblue;
   color: white; }
 
 body {
-  background-color: #FFEBCD;
+  background: linear-gradient(to bottom right, #FFEBCD, #fffbfd);
   min-height: 100vh;
   display: flex;
   flex-direction: column; }
@@ -160,41 +160,51 @@ main {
       grid-row: 1 / span 2;
       font-size: 24px; }
   main .divFormulario {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 50px; }
-    main .divFormulario .divMenuContactoContenedorFormulario {
-      margin-top: 5px;
-      grid-column: 1/2; }
-      main .divFormulario .divMenuContactoContenedorFormulario h2 {
+    display: flex;
+    text-align: center;
+    flex-direction: column; }
+    main .divFormulario .divContenedorFormulario .divMenuContactoContenedorFormulario {
+      margin-top: 5px; }
+      main .divFormulario .divContenedorFormulario .divMenuContactoContenedorFormulario h2 {
         text-align: center; }
-    main .divFormulario form div {
-      margin-bottom: 10px;
-      width: 80%; }
-    main .divFormulario form input[type="text"],
-    main .divFormulario form input[type="email"],
-    main .divFormulario form input[type="number"],
-    main .divFormulario form input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      font-size: 18px;
-      margin-bottom: 10px; }
-    main .divFormulario form fieldset {
-      padding: 10px;
-      font-size: 22px;
-      margin-bottom: 10px; }
-    main .divFormulario form .divBotonFormulario {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      main .divFormulario form .divBotonFormulario input[type="submit"],
-      main .divFormulario form .divBotonFormulario input[type="reset"] {
-        margin-left: 20px; }
+    main .divFormulario .divContenedorFormulario form {
+      flex-direction: column;
+      justify-content: center; }
+      main .divFormulario .divContenedorFormulario form div {
+        text-align: center;
+        margin-bottom: 25px; }
+        main .divFormulario .divContenedorFormulario form div label {
+          display: block;
+          text-align: center; }
+        main .divFormulario .divContenedorFormulario form div input[type="text"],
+        main .divFormulario .divContenedorFormulario form div input[type="email"],
+        main .divFormulario .divContenedorFormulario form div input[type="number"],
+        main .divFormulario .divContenedorFormulario form div input[type="password"] {
+          display: block;
+          width: 500px;
+          padding: 10px;
+          font-size: 18px;
+          margin-bottom: 10px;
+          margin: 0 auto;
+          text-align: center;
+          border: 1px solid #000000; }
+        main .divFormulario .divContenedorFormulario form div .divConsulta input {
+          height: 200px; }
+      main .divFormulario .divContenedorFormulario form fieldset {
+        padding: 10px;
+        font-size: 22px;
+        margin-bottom: 10px; }
+      main .divFormulario .divContenedorFormulario form .divBotonFormulario {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        main .divFormulario .divContenedorFormulario form .divBotonFormulario input[type="submit"],
+        main .divFormulario .divContenedorFormulario form .divBotonFormulario input[type="reset"] {
+          margin-left: 20px; }
     main .divFormulario .divMapaFormulario {
-      grid-column: 2;
       align-self: center;
-      margin-top: 20px; }
+      margin-top: 20px;
+      margin-bottom: 20px; }
       main .divFormulario .divMapaFormulario p {
         align-self: center;
         font-size: 24px; }
@@ -313,9 +323,8 @@ footer {
         height: 350px; }
     main .divProducto .divDescripcionProducto {
       align-items: center;
-      margin-right: 0;
-      text-align: center;
-      margin-top: 0; }
+      margin: 0 auto;
+      text-align: center; }
       main .divProducto .divDescripcionProducto .divBotonesDetalleDescripcionProducto {
         margin-bottom: 40px; }
   main .divCarrito {

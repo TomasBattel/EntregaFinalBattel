@@ -4,7 +4,7 @@
 
 
 body{
-    background-color: $color-principal; 
+    background: linear-gradient(to bottom right, $color-principal, #fffbfd);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -228,54 +228,71 @@ main{
 
     // Una sola hilera
     .divFormulario {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin-bottom: 50px;
-        .divMenuContactoContenedorFormulario {
-            margin-top: 5px;
-            grid-column: 1/2;
-            h2{
-                text-align: center;
-            }
-        }
-        form {
-            div {
-                margin-bottom: 10px;
-                width: 80%;
-            }
-            input[type="text"],
-            input[type="email"],
-            input[type="number"],
-            input[type="password"] {
-                width: 100%;
-                padding: 10px;
-                font-size: 18px;
-                margin-bottom: 10px;
-            }
-            fieldset {
-                padding: 10px;
-                font-size: 22px;
-                margin-bottom: 10px;
-            }
-
-            .divBotonFormulario{
-                @include flex;
-                input[type="submit"],
-                input[type="reset"]{       //RESTABLECER
-                    margin-left: 20px;
-                    @extend %boton;
-
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        .divContenedorFormulario{            
+            .divMenuContactoContenedorFormulario {
+                margin-top: 5px;
+                h2{
+                    text-align: center;
                 }
-                &:hover{
-                    @extend %boton-hover;
+            }
+            form {
+                flex-direction: column;
+                justify-content: center;
+                div {
+                    text-align: center;
+                    margin-bottom: 25px;
+                    label{
+                        display: block;
+                        text-align: center;
+                    }
+
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="number"],
+                    input[type="password"] {
+                        display: block;
+                        width: 500px;
+                        padding: 10px;
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                        margin: 0 auto;
+                        text-align: center; 
+                        border: 1px solid $color-secundario;
+                    }
+                    .divConsulta {          //No funciona
+                        input{
+                            height: 200px;
+                        }
+                        
+                    }
                 }
-            } 
+                fieldset {
+                    padding: 10px;
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+
+                .divBotonFormulario{
+                    @include flex;
+                    input[type="submit"],
+                    input[type="reset"]{       //Estilo de botones
+                        margin-left: 20px;
+                        @extend %boton;
+
+                    }
+                    &:hover{
+                        @extend %boton-hover;
+                    }
+                } 
+            }
         }         
         .divMapaFormulario {
-            grid-column: 2;
             align-self: center;
             margin-top: 20px;
+            margin-bottom: 20px;
             p {
                 align-self: center;
                 font-size: 24px;
@@ -448,7 +465,6 @@ footer{
             flex-direction: column;
             .divImagenProducto{
                 margin: 40px auto;
-                // width: 50%;
                 display: block;
                 justify-content: center;
                 img{
@@ -459,9 +475,8 @@ footer{
             }
             .divDescripcionProducto{
                 align-items: center;
-                margin-right: 0;
+                margin: 0 auto;
                 text-align: center;
-                margin-top: 0;
                 .divBotonesDetalleDescripcionProducto{
                     margin-bottom: 40px;
                 }
