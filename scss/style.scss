@@ -195,7 +195,8 @@ main{
             }
             .divUserFormLogin input[type="text"],
             .divPassFormLogin input[type="password"] {
-                padding: 12px; 
+                margin-left: 28px;
+                width: 74%;
                 font-size: 22px; 
                 margin-bottom: 30px;
             }

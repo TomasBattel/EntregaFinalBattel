@@ -144,7 +144,8 @@ main {
         font-size: 28px; }
       main .divLogin .divFormLogin .divUserFormLogin input[type="text"],
       main .divLogin .divFormLogin .divPassFormLogin input[type="password"] {
-        padding: 12px;
+        margin-left: 28px;
+        width: 74%;
         font-size: 22px;
         margin-bottom: 30px; }
       main .divLogin .divFormLogin .divBotonesFormLogin {
