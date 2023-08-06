@@ -33,8 +33,25 @@ header{
         left: 0;
         width: 100%;
         max-height: 200px;
+        text-decoration: none;
 
     }
+
+    nav a.nav-link{
+        text-decoration: none;
+        color: $color-principal;
+        padding: 8px 12px;
+    }
+
+    .navbar-collapse {
+        top: 100%;
+        background-color: $color-secundario;
+        padding: 10px;
+        width: 100%;
+        max-height: 200px;
+        z-index: 2;
+    }
+
 
     .logo img{
         height: 90px;
@@ -62,16 +79,17 @@ header{
 // MAIN
 
 main{
-    flex-grow: 1;  // Ver si es necesario
+    flex-grow: 1;
     margin-bottom: auto;
 
-    h2{
+    h1{
         display: grid;
         margin-top: 20px;
         margin-bottom: 50px;
         font-size: 50px;
         text-align: center;
-        //fuente para mejorar estilo
+        font-family: $fuente-titulo;
+        font-size: 64px;
 
     }
 
@@ -133,10 +151,17 @@ main{
                     font-weight: bold;
                 }
                 .divParrafoDetalleDescripcionProducto{
-                    @extend %boton;         //BOTON
+                    margin-top: 15px;
+                    margin-bottom: 50px;
+                    p{
+                        font-style: 28px;
+                    }
+                }
+                .divBotonesDetalleDescripcionProducto button{
+                    @extend %boton;
                 }
                 .divBotonesDetalleDescripcionProducto button:hover{
-                    @extend %boton-hover;  // background-color: darkblue; //color predeterminado botones
+                    @extend %boton-hover; 
                 }
                 
             }
@@ -146,16 +171,20 @@ main{
 
     // Cuenta
 
-    .divLogin{      //Cambio de clases
+    .divLogin{ 
         @include flex;
         margin-bottom: 20px;
+        justify-content: center;
         .divFormLogin{
             width: 400px;
             padding: 20px;
             background-color: $color-principal; 
             text-align: center;
-            h2{         //H1 POR H2
-                margin-top: 0;
+            h1{
+                text-align: center;
+                font-family: $fuente-titulo;
+                font-size: 64px;
+                
             }
             .divUserFormLogin,
             .divPassFormLogin{
@@ -163,32 +192,34 @@ main{
             }
             .divUserFormLogin input[type="text"],
             .divPassFormLogin input[type="password"] {
-                width: 100%; /* Ancho del 100% */
-                padding: 12px; /* Espacio interno del campo */
-                font-size: 22px; /* Tamaño de la fuente */
+                padding: 12px; 
+                font-size: 22px; 
                 margin-bottom: 30px;
             }
-            .BotonesFormLogin{
+            .divBotonesFormLogin{
                 @include flex;
-                .BotonBotonesFormLogin{
+                .divBotonBotonesFormLogin{
                     margin-right: 10px;
-                    input[type="submit"]{ 
-                        padding: 10px 20px;
-                    }
-                    .button{
-                        @extend %boton;
-                    }
-                    :hover{
-                        @extend %boton-hover;
-                    }
                 }
-            }
+                .divBotonBotonesFormLogin button{
+                    @extend %boton;
+                }
+                .divBotonBotonesFormLogin button:hover{
+                    @extend %boton-hover;
+                }
+            }          
+      
         }
     }
 
     //Carrito
 
     .divCarrito{
+        h1{
+            text-align: center;
+            font-family: $fuente-titulo;
+            font-size: 64px;
+        }
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-gap: 10px;
@@ -198,7 +229,7 @@ main{
             width: 100%;
             margin-bottom: 20px;
             img{
-                width: 200px;   //Global
+                width: 200px; 
                 height: 200px;
                 margin-right: 20px;
                 object-fit: cover;
@@ -214,33 +245,35 @@ main{
             grid-column: 2;
             grid-row: 1 / span 2;
             font-size: 24px;
-            .button{
-                @extend %boton;
-            }
-            :hover{
-                    @extend %boton-hover;
-            }
-    
+        }
+        .divPagofinalCarrito button{
+            @extend %boton;
+        }
+        .divPagofinalCarrito button:hover{
+            @extend %boton-hover;
         }
     }
     
-    //Contacto / AGREGAR REDES SOCIALES PARA EF
+    //Contacto
 
-    // Una sola hilera
     .divFormulario {
         display: flex;
         text-align: center;
         flex-direction: column;
         .divContenedorFormulario{            
-            .divMenuContactoContenedorFormulario {
-                margin-top: 5px;
-                h2{
+            .divContactoContenedorFormulario{
+                h1{
                     text-align: center;
+                    font-family: $fuente-titulo;
+                    font-size: 64px;
                 }
             }
             form {
                 flex-direction: column;
                 justify-content: center;
+                .divMenuContactoContenedorFormulario {
+                    margin-top: 5px;
+                }
                 div {
                     text-align: center;
                     margin-bottom: 25px;
@@ -254,19 +287,13 @@ main{
                     input[type="number"],
                     input[type="password"] {
                         display: block;
-                        width: 500px;
+                        width: 65%;
                         padding: 10px;
                         font-size: 18px;
                         margin-bottom: 10px;
                         margin: 0 auto;
                         text-align: center; 
                         border: 1px solid $color-secundario;
-                    }
-                    .divConsulta {          //No funciona
-                        input{
-                            height: 200px;
-                        }
-                        
                     }
                 }
                 fieldset {
@@ -278,12 +305,13 @@ main{
                 .divBotonFormulario{
                     @include flex;
                     input[type="submit"],
-                    input[type="reset"]{       //Estilo de botones
+                    input[type="reset"]{  
                         margin-left: 20px;
                         @extend %boton;
 
                     }
-                    &:hover{
+                    input[type="reset"]:hover, 
+                    input[type="submit"]:hover{
                         @extend %boton-hover;
                     }
                 } 
@@ -308,7 +336,7 @@ footer{
     padding: 10px 10px;
     text-align: center;
     margin-top: auto;
-    .contenededor{          // ARREGLAR EN FOOTER MAL TIPEO
+    .contenededor{    
         color: $color-principal;
         a{
             text-decoration: none;
@@ -373,7 +401,7 @@ footer{
                 padding: 20px;
                 background-color: $color-principal; 
                 text-align: center;
-                h2{
+                h1{
                     margin-bottom: 30px;
                 }
                 .divUserFormLogin,
@@ -442,11 +470,6 @@ footer{
 //MQ para Mobile
 
 @media screen and (max-width: 767px) {
-    // header{
-        // .ButtonMenu {
-            // margin-left: 120%;
-        // } 
-    // }
     main{
         .divProductos{
             grid-template-columns: 1fr;
@@ -495,10 +518,8 @@ footer{
                     margin-right: 10px;
                     object-fit: cover;
                 }       
-                .divProductoCarritoEliminar{        //Tacho de basura
-                    margin-left: 80px;
-                    size: 8px;
-                }
+
+
             }
             .divPagofinalCarrito{
                 flex-direction: column;
@@ -522,11 +543,10 @@ footer{
                 .divUserFormLogin,
                 .divPassFormLogin{
                     margin-bottom: 20px;
-                    font-style: 12px;     //
                 }
                 .divBotonesFormLogin{
                     
-                    .BotonBotonesFormLogin{
+                    .divBotonBotonesFormLogin{
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -536,7 +556,7 @@ footer{
             }
         }
 
-        .divFormulario{     //ARREGLAR
+        .divFormulario{  
             display: flex;
             flex-direction: column;
             align-items: center;

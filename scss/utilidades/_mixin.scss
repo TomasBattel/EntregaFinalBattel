@@ -1,23 +1,10 @@
 // Medidas
 
 
-@mixin button-styles {
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    /* Agrega otros estilos comunes para los botones aquí */
-  }
-
-//@include estilos-base(x,y)
-
-
-
 //Sin parametros
 @mixin flex{
     display: flex;
     justify-content: center;
     align-items: center;
-    // Seguir agregando
 }
 

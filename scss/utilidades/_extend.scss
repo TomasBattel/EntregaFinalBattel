@@ -1,11 +1,15 @@
 
 %boton{
-    padding: 10px 20px;
-    font-size: 24px;
+    padding: 10px 22px;
+    font-size: 16px;
+    background-color: $color-boton;      
+    color: #fff;
+    
+
 
 }
 
 %boton-hover{
-    background-color: darkblue;
+    background-color: $color-secundario;
     color: white;
 }
