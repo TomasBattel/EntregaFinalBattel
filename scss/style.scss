@@ -175,11 +175,14 @@ main{
         @include flex;
         margin-bottom: 20px;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
         .divFormLogin{
-            width: 400px;
             padding: 20px;
             background-color: $color-principal; 
             text-align: center;
+            border: 1px solid black;
+            box-sizing: border-box;
             h1{
                 text-align: center;
                 font-family: $fuente-titulo;
@@ -287,7 +290,7 @@ main{
                     input[type="number"],
                     input[type="password"] {
                         display: block;
-                        width: 65%;
+                        width: 70%;
                         padding: 10px;
                         font-size: 18px;
                         margin-bottom: 10px;
